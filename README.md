@@ -60,4 +60,65 @@ Step 10: Repeat step 9 until x = x2
 Step 11: End Algorithm  
 
 
+## Bresenham Line Drawing Algorithm    
+
+### About Bresenham Line Drawing Algorithm:   
+Bresenham Line Drawing Algorithm is an efficient method because it involves only integer addition, subtractions, and multiplication operations. These operations can be performed very rapidly so lines can be generated quickly.
+
+In this method, next pixel selected is that one who has the least distance from true line.    
+
+### Advantages:  
+(a) It involves only integer arithematic, so it is simple.  
+(b) It avoids generation of duplicate points.  
+(c) It can be implemented using hardware because it does not use multiplication and division.  
+(d) It is faster than DDA Line Drawing Algorithm as it does not involves floating point calculations.  
+
+### Disadvantages:  
+(a) It is meant for basic line drawing only. Smooth lines cannot be generated.  
+
+### Algorithm  
+Step 1: Start Algorithm  
+
+Step 2: Declare variable x1,x2,y1,y2,d,i1,i2,dx,dy  
+
+Step 3: Enter value of x1,y1,x2,y2  
+                Where (x1,y1) are coordinates of Starting point    
+                 (x2,y2) are coordinates of Ending point  
+
+Step 4: Calculate dx = x2-x1  
+                Calculate dy = y2-y1  
+                Calculate i1=2*dy  
+                Calculate i2=2*(dy-dx)  
+                Calculate d=i1-dx  
+
+Step 5: Consider (x, y) as starting point and xendas maximum possible value of x.  
+                If dx < 0  
+                        Then x = x2  
+                        y = y2  
+                          xend=x1  
+                If dx > 0  
+                    Then x = x1  
+                y = y1  
+                        xend=x2  
+
+Step 6: Generate point at (x,y)coordinates.  
+
+Step 7: Check if whole line is generated.  
+                If x > = xend  
+                Stop.  
+
+Step 8: Calculate co-ordinates of the next pixel  
+                If d < 0  
+                    Then d = d + i1  
+                If d ≥ 0  
+          Then d = d + i2  
+                Increment y = y + 1  
+
+Step 9: Increment x = x + 1  
+
+Step 10: Draw a point of latest (x, y) coordinates  
+
+Step 11: Go to step 7  
+
+Step 12: End of Algorithm  
 
