@@ -87,8 +87,8 @@ Step 3: Enter value of x1,y1,x2,y2
 
 Step 4: Calculate dx = x2-x1  
                 Calculate dy = y2-y1  
-                Calculate i1=2[*]dy  
-                Calculate i2=2[*](dy-dx)  
+                Calculate i1=2\*dy  
+                Calculate i2=2\*(dy-dx)  
                 Calculate d=i1-dx  
 
 Step 5: Consider (x, y) as starting point and xendas maximum possible value of x.  
