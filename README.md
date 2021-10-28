@@ -122,3 +122,37 @@ Step 11: Go to step 7
 
 Step 12: End of Algorithm  
 
+
+## Circle Drawing
+It is not easy to display a continuous smooth arc on the computer screen as our computer screen is made of pixels organized in matrix form. So, to draw a circle on a computer screen we should always choose the nearest pixels from a printed pixel so as they could form an arc.
+
+## Mid Point Circle Drawing Algorithm    
+
+### About Mid Point Circle Drawing Algorithm:   
+The mid-point circle drawing algorithm is an algorithm used to determine the points needed for rasterizing a circle. 
+We use the mid-point algorithm to calculate all the perimeter points of the circle in the first octant and then print them along with their mirror points in the other octants. This will work because a circle is symmetric about it’s centre.  
+
+### Advantages:  
+(a) This algorithm is efficient for scan conversion for drawing geometric curves on raster display.  
+
+### Disadvantages:  
+(a) Distance between the pixels is not equal so we won’t a smooth circle.  
+
+### Algorithm  
+
+## Bresenham Circle Drawing Algorithm    
+
+### About Bresenham Circle Drawing Algorithm:   
+To calculate the next pixel location from a previously known pixel location (x, y). In Bresenham’s algorithm at any point (x, y) we have two option either to choose the next pixel (x+1, y) or (x+1, y-1), which can be decided by using the Decision Parameter (let us assume as 'd') as:  
+if d>0, then (x+1, y-1) is chosen else (x+1, y) is chosen.  
+
+### Advantages:  
+(a) The Bresenhem’s circle drawing algorithm uses integer arithmetic which makes the implementation less complex.  
+(b) Due to its integer arithmetic, it is less time-consuming.  
+(c) This algorithm is more accurate than any other circle drawing algorithm as it avoids the use of round off function.  
+
+### Disadvantages:  
+(a) This algorithm does not produce smooth results due to its integer arithmetic as it fails to diminish the zigzags completely.  
+(b) The Bresenhem’s circle drawing algorithm is not accurate in the case of drawing of complex graphical images.  
+
+### Algorithm  
